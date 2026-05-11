@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="toast" class="toast"></div>
+<nav class="bottom-nav">
+
+  <button onclick="scrollToSection('pembuka2')" class="nav-item">
+    <!-- Pembuka -->
+    <svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v10h-5v-6H11v6H6V11H3z"/></svg>
+  </button>
+
+  <button onclick="scrollToSection('mempelai')" class="nav-item">
+    <!-- Mempelai -->
+    <svg viewBox="0 0 24 24"><path d="M16 11c1.7 0 3-1.3 3-3S17.7 5 16 5s-3 1.3-3 3 1.3 3 3 3zM8 11c1.7 0 3-1.3 3-3S9.7 5 8 5 5 6.3 5 8s1.3 3 3 3zm0 2c-2.7 0-8 1.3-8 4v2h8v-6zm8 0c-2.7 0-8 1.3-8 4v2h16v-2c0-2.7-5.3-4-8-4z"/></svg>
+  </button>
+
+  <button onclick="scrollToSection('story')" class="nav-item">
+    <!-- Story -->
+    <svg viewBox="0 0 24 24"><path d="M4 4h16v12H5.17L4 17.17V4zm2 2v7.17L5.17 14H18V6H6z"/></svg>
+  </button>
+
+  <button onclick="toggleMusic()" class="nav-item" id="musicBtn">
+    <!-- Music (Vinyl) -->
+    <div class="vinyl"></div>
+  </button>
+
+  <button onclick="scrollToSection('acara')" class="nav-item">
+    <!-- Acara -->
+    <svg viewBox="0 0 24 24"><path d="M7 2h2v2h6V2h2v2h3v18H4V4h3V2zm12 20V8H5v14h14z"/></svg>
+  </button>
+
+  <button onclick="scrollToSection('gift')" class="nav-item">
+    <!-- Gift -->
+    <svg viewBox="0 0 24 24"><path d="M20 7h-3.17A3 3 0 0 0 12 4a3 3 0 0 0-4.83 3H4v4h16V7zM4 13v7h7v-7H4zm9 0v7h7v-7h-7z"/></svg>
+  </button>
+
+  <button onclick="scrollToSection('rsvp')" class="nav-item">
+    <!-- RSVP -->
+    <svg viewBox="0 0 24 24"><path d="M21 8V7l-3 2-2-2-2 2-3-2v1l3 2-3 2v1l3-2 2 2 2-2 3 2v-1l-3-2 3-2z"/></svg>
+  </button>
+
+</nav>
+  
+  
+  
+<div id="imgModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+<!-- AUDIO -->
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mp3">
+</audio>
+
+<!-- OPENING (DI ATAS SEMUA) -->
+<section id="opening">
+
+  <div class="bg-foto"></div>
+
+  <div class="gate left"></div>
+  <div class="gate right"></div>
+  
+<div class="overlay">
+<h1 class="judul">Pawiwahan</h1>
+<p class="sub">Surere & Sulala</p>
+  <p class="to">
+      Kepada Yth.<br>
+      <span id="namaTamu">Tamu Undangan</span>
+    </p>
+<button class="btn-buka" onclick="bukaUndangan()">Buka Undangan</button>
+</div>
+
+</section>
+
+<!-- MAIN (SUDAH ADA DI BELAKANG) -->
+<main id="main">
+
+  <!-- PEMBUKA 2 -->
+ <section id="pembuka2" class="section">
+
+  <div class="bg-pembuka"></div>
+
+  <div class="content">
+    <h2 class="judul-jawa">Assalamu’alaikum</h2>
+
+<p class="teks line">Kanthi rahmat lan ridho Gusti Allah SWT,</p>
+<p class="teks line">kulo nyuwun rawuhipun panjenengan</p>
+<p class="teks line">wonten ing acara pawiwahan kulo.</p>
+  <h2 class="nama line">Surere & Sulala</h2>
+<p class="teks line">12 - Desember - 2026</p>
+
+    <!-- COUNTDOWN -->
+<div id="countdown" class="countdown-box">
+  <div><span id="hari">0</span><p>Hari</p></div>
+  <div><span id="jam">0</span><p>Jam</p></div>
+  <div><span id="menit">0</span><p>Menit</p></div>
+  <div><span id="detik">0</span><p>Detik</p></div>
+</div>
+
+  </div>
+
+</section>
+<div class="bridge">
+  <img src="ornament.png" alt="bridge">
+</div>
+
+  <!-- MEMPELAI -->
+<section id="mempelai" class="section">
+
+  <!-- BACKGROUND -->
+  <div class="bg-mempelai"></div>
+
+  <!-- =========================
+       AYAT (DI ATAS PRIA)
+  ========================= -->
+  <div class="quran-text">
+    <p class="ayat">
+      وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا
+    </p>
+    <p class="arti">
+      “Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri,
+      supaya kamu merasa tenteram kepadanya.”
+    </p>
+    <p class="sumber">— QS. Ar-Rum: 21</p>
+  </div>
+
+  <!-- =========================
+       MEMPELAI
+  ========================= -->
+  <div class="mempelai-wrapper">
+
+    <!-- PRIA -->
+    <div class="row pria-row">
+
+      <div class="foto">
+        <img src="pria.jpg" alt="Surere">
+      </div>
+
+      <div class="info">
+        <h2>Surere</h2>
+        <p>Putra dari</p>
+        <p>Bapak Dandi</p>
+      </div>
+
+    </div>
+<div class="tengah"></div>
+    <!-- WANITA -->
+    <div class="row wanita-row">
+
+      <div class="info">
+        <h2>Sulala</h2>
+        <p>Putri dari</p>
+        <p>Bapak Iwan</p>
+      </div>
+
+      <div class="foto">
+        <img src="wanita.jpg" alt="Sulala">
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- =========================
+       DIVIDER BAWAH
+  ========================= -->
+  <div class="divider">
+    <span>✦ ✦ ✦</span>
+  </div>
+
+</section>
+<div class="bridge">
+  <img src="ornament.png" alt="bridge">
+</div>
+<!-- STORY SECTION -->
+<section id="story" class="section">
+
+
+
+  <div class="story">
+
+    <!-- 1 -->
+
+      <div><h2 class="story-title">Story</h2></div>
+    <div class="story-item left">
+      <div class="photo">
+        <img src="story1.png" alt="First Meet">
+      </div>
+      <div class="text">
+        <h3>Pertama ku Lihat</h3>
+        <p>Bertemu di sebuah tempat makan sederhana, menjadi awal dari cerita kita.</p>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="story-item right">
+      <div class="text">
+        <h3>Rasa</h3>
+        <p>Mulai tumbuh rasa, mengenal satu sama lain lebih dalam.</p>
+      </div>
+      <div class="photo">
+        <img src="story2.png" alt="Walking Together">
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="story-item left">
+      <div class="photo">
+        <img src="story3.png" alt="Dating">
+      </div>
+      <div class="text">
+        <h3>Kenyamanan</h3>
+        <p>Hari-hari penuh tawa, cerita, dan kebersamaan yang indah.</p>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="story-item right">
+      <div class="text">
+        <h3>Ikatan</h3>
+        <p>Melangkah ke tahap serius untuk masa depan bersama selamanya.</p>
+      </div>
+      <div class="photo">
+        <img src="story4.png" alt="Engagement">
+      </div>
+    </div>
+<div class="divider">✦ ✦ ✦</div>
+  </div>
+
+</section>
+
+<div class="bridge">
+  <img src="ornament.png" alt="bridge">
+</div>
+
+  <!-- GALLERY -->
+<section id="gallery" class="gallery-section">
+
+  <h2 class="gallery-title">Gallery</h2>
+
+  <div class="gallery-grid">
+
+    <div class="polaroid"><img src="gl1.png"></div>
+    <div class="polaroid"><img src="gl2.png"></div>
+    <div class="polaroid"><img src="gl3.png"></div>
+    <div class="polaroid"><img src="gl4.png"></div>
+
+    <div class="polaroid"><img src="gl5.png"></div>
+    <div class="polaroid"><img src="gl6.png"></div>
+    <div class="polaroid"><img src="gl7.png"></div>
+    <div class="polaroid"><img src="gl8.png"></div>
+
+  </div>
+
+</section>
+<div class="bridge">
+  <img src="ornament.png" alt="bridge">
+</div>
+
+
+
+  <!-- EVENT -->
+<section class="event-section">
+
+  <h2 class="event-title">Tempat & Tanggal</h2>
+
+<div class="location-card" onclick="toggleLocation(this)">
+
+  <div class="location-header">
+    📍 Lokasi
+  </div>
+
+  <div class="location-content">
+
+    <div class="map-frame">
+<iframe
+  src="https://www.google.com/maps?q=Madiun,+Jawa+Timur&output=embed&z=15&t=m"
+  loading="lazy">
+</iframe>
+    </div>
+
+    <a 
+      class="direction-btn"
+      href="https://maps.app.goo.gl/TWTTEGvSQMTBoHk96"
+      target="_blank">
+      🗺 Arah
+    </a>
+
+  </div>
+
+</div>
+<div class="divider">✦ ✦ ✦</div>
+  <div id="acara" class="event-grid">
+
+<!-- AKAD -->
+<div class="event-card">
+  <div class="event-icon">
+    <svg viewBox="0 0 24 24" width="42" height="42">
+      <path fill="#d4af37" d="M7 2h2v2h6V2h2v2h3a2 2 0 0 1 2 2v3H2V6a2 2 0 0 1 2-2h3V2zm15 8H2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V10z"/>
+    </svg>
+  </div>
+
+  <h3>Akad</h3>
+  <p class="event-date">11-Desember-2026</p>
+<button onclick="addToCalendar('akad')"> Catat Tanggal</button>
+</div>
+
+<!-- RESEPSI -->
+<div class="event-card">
+  <div class="event-icon">
+    <svg viewBox="0 0 24 24" width="42" height="42">
+      <path fill="#d4af37" d="M7 2h2v2h6V2h2v2h3a2 2 0 0 1 2 2v3H2V6a2 2 0 0 1 2-2h3V2zm15 8H2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V10z"/>
+    </svg>
+  </div>
+
+  <h3>Resepsi</h3>
+  <p class="event-date">12-Desember-2026</p>
+ <button onclick="addToCalendar('resepsi')"> Catat Tanggal</button>
+</div>
+  </div>
+
+</section>
+
+<div class="bridge">
+  <img src="ornament.png" alt="bridge">
+</div>
+
+<section id="gift" class="gift-section">
+
+  <h2>Gift</h2>
+
+  <div class="wallet-wrapper" onclick="toggleWallet(this)">
+
+    <!-- DOMPET 3D -->
+    <div class="wallet">
+
+      <div class="wallet-front">
+        <svg width="90" height="90" viewBox="0 0 24 24">
+          <path fill="#d4af37" d="M21 7H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zm0 2v2h-3.5a1.5 1.5 0 0 1 0-3H21z"/>
+        </svg>
+        <p>Terimakasih</p>
+      </div>
+
+      <div class="wallet-inside">
+
+<div class="gift-card" onclick="event.stopPropagation(); openWallet('A/n Sureee','bca.png','1234567890')">
+  <img src="bca.png">
+</div>
+
+<div class="gift-card" onclick="event.stopPropagation(); openWallet('A/n Surere','dana.png','081234567890')">
+  <img src="dana.png">
+</div>
+
+<div class="gift-card" onclick="event.stopPropagation(); openWallet('A/n Surere','gopay.png','081234567890')">
+  <img src="gopay.png">
+</div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- MODAL DETAIL -->
+<!-- MODAL -->
+<div class="wallet-modal" id="walletModal">
+
+  <div class="atm-card">
+
+    <div class="atm-chip"></div>
+
+    <div class="atm-top">
+      <img id="walletLogo">
+    </div>
+
+    <div class="atm-number" id="walletNumber"></div>
+    <div class="atm-name" id="walletName"></div>
+
+    <button class="atm-copy" onclick="copyNumber()">COPY</button>
+
+
+
+  </div>
+  <div>
+ <span class="closeCard" onclick="closeModalcard()">✖</span></div>
+</div>
+
+<div class="bridge">
+  <img src="ornament.png" alt="bridge">
+</div>
+
+  <!-- RSVP -->
+<section id="rsvp" class="rsvp-section">
+
+  <h2 class="rsvp-title">RSVP</h2>
+  <p class="rsvp-sub">Konfirmasi Kehadiran Anda</p>
+
+  <form class="rsvp-form" onsubmit="kirimRSVP(event)">
+
+    <!-- AUTO NAMA DARI HERO -->
+    <p class="rsvp-nama">
+      Nama: <span id="rsvpNama">Tamu Undangan</span>
+    </p>
+
+    <!-- PILIH KEHADIRAN -->
+    <select id="kehadiran" required>
+      <option value="">Pilih Kehadiran</option>
+      <option value="Hadir">Hadir</option>
+      <option value="Tidak Hadir">Tidak Hadir</option>
+    </select>
+<!-- JUMLAH TAMU -->
+<input 
+  type="number" 
+  id="jumlah" 
+  placeholder="Jumlah Tamu (max 5)" 
+  min="1" 
+  max="5" 
+  required
+>
+    <!-- PESAN -->
+    <textarea id="pesan" placeholder="Ucapan / Doa (opsional)"></textarea>
+
+    <!-- BUTTON -->
+    <button type="submit">Kirim</button>
+
+  </form>
+
+</section>
+<section id="doa" class="doa-section">
+
+  <h2 class="doa-title">Doa & Ucapan</h2>
+  <p class="doa-sub">Dari Tamu Undangan</p>
+
+  <div id="doaList" class="doa-list">
+    <p class="loading">Memuat ucapan...</p>
+  </div>
+
+</section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
